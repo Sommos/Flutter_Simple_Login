@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'decision_tree.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -9,6 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: ,);
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: DecisionTree(),
+    );
   }
 }
