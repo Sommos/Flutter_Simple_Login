@@ -42,37 +42,27 @@ class _LoginPageState extends State<LoginPage> {
       // pop loading circle
       Navigator.pop(context);
       if (e.code == "user-not-found") {
-        wrongEmailMessage();
+        showErrorMessage("Email and password don't match");
         debugPrint("No user found for that email");
       } else if (e.code == "wrong-password") {
-        wrongPasswordMessage();
+        showErrorMessage("Incorrect password");
         debugPrint("Incorrect password");
       }
     }
   }
 
-  // wrong email message popup
-  void wrongEmailMessage() {
+  // log in error message popup
+  void showErrorMessage(String message) {
     showDialog(
       context: context, 
       builder: (context) {
-        const AlertDialog(
-          title: Text(
-            "Incorrect Email"
-          ),
-        );
-      }
-    );
-  }
-
-  // wrong password message popup
-  void wrongPasswordMessage() {
-    showDialog(
-      context: context, 
-      builder: (context) {
-        const AlertDialog(
-          title: Text(
-            "Incorrect Password"
+        return AlertDialog(
+          backgroundColor: Colors.black,
+          title: Center(
+            child: Text(
+              message,
+              style: const TextStyle(color: Colors.white),
+            ),
           ),
         );
       }
@@ -95,6 +85,7 @@ class _LoginPageState extends State<LoginPage> {
                 // logo 
                 const Icon(
                   Icons.lock,
+                  color: Colors.black,
                   size: 100,
                 ),
                 
@@ -135,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        "Forgot Password?",
+                        "Forgot your password?",
                         style: TextStyle(
                           color: Colors.grey[600],
                         ),
