@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:third_app/components/square_tile.dart';
 
+import '../components/square_tile.dart';
 import '../components/textfield.dart';
 import '../components/button.dart';
 
@@ -155,7 +155,7 @@ class LoginPage extends StatelessWidget {
                     "Register Now",
                     style: TextStyle(
                       color: Colors.blue, 
-                      fontWeight: FontWeight.bold
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
