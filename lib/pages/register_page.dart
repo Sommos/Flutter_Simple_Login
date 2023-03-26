@@ -95,7 +95,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 const Icon(
                   Icons.lock,
                   color: Colors.black,
-                  size: 100,
+                  size: 75,
                 ),
                 
                 const SizedBox(height: 50),
@@ -143,7 +143,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   message: "Sign up",
                 ),
                 
-                const SizedBox(height: 20),
+                const SizedBox(height: 50),
       
                 // or continue with
                 Padding(
@@ -177,7 +177,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                 ),
       
-                const SizedBox(height: 20),
+                const SizedBox(height: 50),
       
                 // google & apple sign in buttons
                 Row(

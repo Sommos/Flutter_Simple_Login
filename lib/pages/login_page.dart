@@ -88,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                 const Icon(
                   Icons.lock,
                   color: Colors.black,
-                  size: 100,
+                  size: 75,
                 ),
                 
                 const SizedBox(height: 50),
@@ -203,7 +203,7 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
                 
-                const SizedBox(height: 20),
+                const SizedBox(height: 15),
       
                 // not a member? register now
                 Row(
