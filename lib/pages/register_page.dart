@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:third_app/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
 import '../components/square_tile.dart';
@@ -181,16 +182,18 @@ class _RegisterPageState extends State<RegisterPage> {
                 // google & apple sign in buttons
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     SquareTile(
+                      onTap: () => AuthService().signInWithGoogle(),
                       imagePath: 'lib/images/google_logo.png'
                     ),
       
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
       
                     SquareTile(
+                      onTap: () {},
                       imagePath: 'lib/images/apple_logo.png'
                     ),
                   ],

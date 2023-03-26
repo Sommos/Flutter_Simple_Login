@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:third_app/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
 import '../components/square_tile.dart';
@@ -17,7 +18,6 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   // text editing controllers
   final emailController = TextEditingController();
-
   final passwordController = TextEditingController();
 
   // sign user in method
@@ -184,16 +184,20 @@ class _LoginPageState extends State<LoginPage> {
                 // google & apple sign in buttons
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
+                    // google button
                     SquareTile(
+                      onTap: () => AuthService().signInWithGoogle(),
                       imagePath: 'lib/images/google_logo.png'
                     ),
       
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
       
+                    // apple button
                     SquareTile(
+                      onTap: () {},
                       imagePath: 'lib/images/apple_logo.png'
                     ),
                   ],
